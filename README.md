@@ -19,17 +19,6 @@ This will run checkstyle, unit test and code coverage check
 #### start application
 `./gradlew bootRun` or `java -jar build/libs/pos-0.1.0.jar`
 
-### 测试运行结果
-#### 有95折优惠和买二赠一优惠：
-![result](http://bmob-cdn-1019.b0.upaiyun.com/2016/07/19/e8508fc2407a56f88044351b4b43ef62.png)
-#### 只有95折优惠：
-![result](http://bmob-cdn-1019.b0.upaiyun.com/2016/07/19/4d54cbef4091b65a80ec1eb03e5260e1.png)
-#### 只有买二赠一优惠：
-![result](http://bmob-cdn-1019.b0.upaiyun.com/2016/07/19/6db26c5e4027ad8f80566089a9b183b2.png)
-#### 无优惠：
-![result](http://bmob-cdn-1019.b0.upaiyun.com/2016/07/19/795308694031ce0080f517fcc380de6d.png)
-
-
 ### TODO
 - 为GoodsRepository实现类增加商品信息的读入方式（配置文件/数据库）
 - 为GoodsRepository实现类增加Promotions的反射set方式
