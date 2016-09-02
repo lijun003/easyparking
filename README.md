@@ -19,11 +19,6 @@ This will run checkstyle, unit test and code coverage check
 #### start application
 `./gradlew bootRun` or `java -jar build/libs/pos-0.1.0.jar`
 
-### TODO
-- 为GoodsRepository实现类增加商品信息的读入方式（配置文件/数据库）
-- 为GoodsRepository实现类增加Promotions的反射set方式
-- 异常处理
-
 ### Git提交规范：
 
 [卡号][提交作者&Pair作者] - comment here
