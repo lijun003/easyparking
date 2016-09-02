@@ -2,14 +2,14 @@
 
 ### travis-ci
 
-[![travis-ci](https://api.travis-ci.org/TWatermelon/thought-pos.svg)](https://travis-ci.org/TWatermelon/thought-pos)
+[![travis-ci](https://api.travis-ci.org/lijun003/easyparking.svg)](https://travis-ci.org/lijun003/easyparking)
 
 ### BUILD
 
 #### Generate IntelliJ IDEA project
 `./gradlew cleanIdea idea`
 
-Open the `thought-pos.ipr` using IntelliJ
+Open the `easyparking.ipr` using IntelliJ
 
 #### Run clean and build tasks
 `./gradlew clean build`
@@ -17,7 +17,7 @@ Open the `thought-pos.ipr` using IntelliJ
 This will run checkstyle, unit test and code coverage check
 
 #### start application
-`./gradlew bootRun` or `java -jar build/libs/pos-0.1.0.jar`
+`./gradlew bootRun` or `java -jar build/libs/easy-parking-0.1.0.jar`
 
 ### Git提交规范：
 
