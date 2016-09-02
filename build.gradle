@@ -29,7 +29,7 @@ dependencies {
 }
 
 jar {
-    baseName = "pos"
+    baseName = "easy-parking"
     version = "0.1.0"
 }
 

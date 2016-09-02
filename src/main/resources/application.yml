@@ -1,6 +1,6 @@
 server:
   port: 8081
-  context-path: /pos
+  context-path: /easy-parking
 
 security:
   user:
