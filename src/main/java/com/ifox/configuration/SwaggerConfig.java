@@ -1,4 +1,4 @@
-package tw.thoughtpos.configuration;
+package com.ifox.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
