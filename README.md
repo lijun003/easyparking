@@ -1,4 +1,4 @@
-# Thought-POS (for the final battle)
+# Easy-parking project
 
 ### travis-ci
 
