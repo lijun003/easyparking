@@ -1,0 +1,1 @@
+INSERT INTO Car_Upload (P_id, Plate, status) VALUES (1111, '川S88888', 0)
