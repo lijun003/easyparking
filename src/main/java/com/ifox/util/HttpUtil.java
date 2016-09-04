@@ -1,5 +1,7 @@
 package com.ifox.util;
 
+import static java.util.concurrent.TimeUnit.SECONDS;
+
 import java.io.IOException;
 
 import okhttp3.Call;
@@ -12,7 +14,11 @@ import okhttp3.Response;
 
 public class HttpUtil {
     public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
-    private static OkHttpClient okHttpClient = new OkHttpClient();
+    private static OkHttpClient okHttpClient = new OkHttpClient.Builder()
+            .connectTimeout(10, SECONDS)
+            .writeTimeout(10, SECONDS)
+            .readTimeout(30, SECONDS)
+            .build();
     public static OkHttpClient getOkHttpClient() {
         return okHttpClient == null ? new OkHttpClient() : okHttpClient;
     }

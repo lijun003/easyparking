@@ -1,8 +1,12 @@
 package com.ifox.service;
 
 import static java.util.Arrays.asList;
+import static org.mockito.Matchers.anyObject;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.mockito.MockitoAnnotations.initMocks;
+
+import java.io.IOException;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -26,7 +30,9 @@ public class ScheduledServiceTest {
     }
 
     @Test
-    public void should_return_right_schedule_time() {
-        defaultScheduledService.reportCurrentTime();
+    public void should_upload_car_info() throws IOException {
+        defaultScheduledService.uploadCarInfo();
+        verify(carUploadRepository).findByStatus(0);
+        verify(carUploadRepository).save((CarUpload) anyObject());
     }
 }

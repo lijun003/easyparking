@@ -1,8 +1,10 @@
 package com.ifox.service;
 
+import java.io.IOException;
+
 import org.springframework.stereotype.Service;
 
 @Service
 public interface ScheduledService {
-    void reportCurrentTime();
+    void uploadCarInfo() throws IOException;
 }
