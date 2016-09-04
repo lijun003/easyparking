@@ -12,6 +12,7 @@ jacocoTestReport {
         classDirectories = files(classDirectories.files.collect {
             fileTree(dir: it, exclude: [ '**/configuration/**',
                                          '**/repository/**',
+                                         '**/util/**',
                                          '**/domain/**',
                                          '**/PosApplication**'])
         })
