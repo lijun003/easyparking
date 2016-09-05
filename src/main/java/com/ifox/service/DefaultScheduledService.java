@@ -31,14 +31,20 @@ public class DefaultScheduledService implements ScheduledService {
         List<CarUpload> carUploads;
         carUploads = carUploadRepository.findByStatus(NOT_UPLOAD);
         for (CarUpload carUpload : carUploads) {
-            System.out.println(carUpload.getPlate() + "------------------->>>>>>>>>>>>>>");
-            Question question = new Question (UUID.randomUUID().toString(), "string", "string");
-            Response response = HttpUtil.post(URL, JSON.toJSONString(question));
-            if (response.isSuccessful()) {
-                System.out.println("success------------------->>>>>>>>>>>>>>");
-                carUpload.setStatus(UPLOADED);
-                carUploadRepository.save(carUpload);
-            }
+            Response response = uploadInfo();
+            updateStatus(carUpload, response);
         }
+    }
+
+    private void updateStatus(CarUpload carUpload, Response response) {
+        if (response.isSuccessful()) {
+            carUpload.setStatus(UPLOADED);
+            carUploadRepository.save(carUpload);
+        }
+    }
+
+    private Response uploadInfo() throws IOException {
+        Question question = new Question (UUID.randomUUID().toString(), "string", "string");
+        return HttpUtil.post(URL, JSON.toJSONString(question));
     }
 }
