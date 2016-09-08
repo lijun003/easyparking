@@ -16,7 +16,7 @@ public class SwaggerConfig {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("tw.thoughtpos.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.ifox.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
